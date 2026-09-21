@@ -1,3 +1,9 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # loads variables from .env into environment
+
+password = os.environ.get("DB_PASSWORD")
 from fastapi import FastAPI
 import psycopg2
 from sample import conn
